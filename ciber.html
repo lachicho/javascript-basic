@@ -15,7 +15,7 @@
     <p id="datos"></p> -->
 
      <!-- Ex 8 Calculadora -->
-     <!-- <h1>Calculadora</h1>
+     <h1>Calculadora</h1>
      <p>Introduzca un número:</p>
      <input type="text" id="num1"/>
      <p>Introduzca otro número:</p>
@@ -24,7 +24,7 @@
      <input type="text" id="operador"/>
      <p>El resultado es:</p>
      <input type="button" onClick="calculadora()" value="Click aqui"/>
-     <p id="resultado"></p> -->
+     <p id="resultado"></p>
    
     <script>
         //Ex 1
@@ -77,47 +77,49 @@
         //         document.write("La objecte "+ objetes[i]+ " està a la posició "+i+"<br/>");
         //     }
         
-        //Ejercicio Calculadora 
-        // function calculadora(valor1, valor2, operador) {
-        //     var valor1=parseInt(document.getElementById("num1").value);
-        //     var valor2=parseInt(document.getElementById("num2").value);
-        //     var operador=document.getElementById("operador").value;
-        //     var res;
+        // Ejercicio Calculadora 
+        function calculadora(valor1, valor2, operador) {
+            var valor1=parseInt(document.getElementById("num1").value);
+            var valor2=parseInt(document.getElementById("num2").value);
+            var operador=document.getElementById("operador").value;
+            var res;
             
-        //         if(!isNaN(valor1) && !isNaN(valor2)){
-        //             switch(operador){
-        //                 case "+":
-        //                 res=parseFloat(valor1)+parseFloat(valor2);
-        //                 document.getElementById("resultado").innerHTML = res;
-        //                 break;
+                if(!isNaN(valor1) && !isNaN(valor2)){
+                    switch(operador){
+                        case "+":
+                        res=parseFloat(valor1)+parseFloat(valor2);
+                        document.getElementById("resultado").innerHTML = res;
+                        break;
 
-        //                 case "-":
-        //                 res=parseFloat(valor1)-parseFloat(valor2);
-        //                 document.getElementById("resultado").innerHTML = res;
-        //                 break;
+                        case "-":
+                        res=parseFloat(valor1)-parseFloat(valor2);
+                        document.getElementById("resultado").innerHTML = res;
+                        break;
                         
-        //                 case "*":
-        //                 res=parseFloat(valor1)*parseFloat(valor2);
-        //                 document.getElementById("resultado").innerHTML = res;
-        //                 break;
+                        case "*":
+                        res=parseFloat(valor1)*parseFloat(valor2);
+                        document.getElementById("resultado").innerHTML = res;
+                        break;
                         
-        //                 case "/":
-        //                     if((valor2!=0)){
-        //                         res=parseFloat(valor1)/parseFloat(valor2);
-        //                         document.getElementById("resultado").innerHTML = res;   
-        //                     }
-        //                     else{
-        //                         alert("Resultado indefinido. Ingrese otro denominador");   
-        //                     }
-        //                 break;
+                        case "/":
+                            if((valor2!=0)){
+                                res=parseFloat(valor1)/parseFloat(valor2);
+                                document.getElementById("resultado").innerHTML = res;   
+                            }
+                            else{
+                                alert("Resultado indefinido. Ingrese otro denominador");   
+                            }
+                        break;
 
-        //                 default:
-        //                 alert("Ingrese operadores válidos");   
-        //             }   
-        //         }else{
-        //             alert("Introduzca un número válido");
-        //         }  
-       
+                        default:
+                        alert("Ingrese operadores válidos");   
+                    }   
+                }else{
+                    alert("Introduzca un número válido");
+                }  
+        }
+
+
     </script>
 </body>
 </html>
